@@ -13,12 +13,22 @@ import java.io.IOException;
 public class Capture_screenshot extends Testbase {
     @Test
     public void c_screenshot_test01() throws IOException {
-     driver.get("https://www.softwaretestingmaterial.com/capture-screenshot-using-selenium-webdriver");
-     File screenshotFile= ((TakesScreenshot)driver).getScreenshotAs(OutputType.FILE);
-        FileUtils.copyFile(screenshotFile, new File("D:\\SoftwareTestingMaterial.png") );
-      driver.close();
-      driver.quit();
+        driver.get("https://www.softwaretestingmaterial.com/capture-screenshot-using-selenium-webdriver");
+        File screenshotFile = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
+        FileUtils.copyFile(screenshotFile, new File("D:\\SoftwareTestingMaterial.png"));
+        driver.close();
+        driver.quit();
 
+
+    }
+
+    @Test
+    public void c_screenshot_test02() throws IOException {
+        driver.get("https://www.amazon.com");
+        File screenshotFile = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
+        FileUtils.copyFile(screenshotFile, new File("D:\\amazon.png"));
+        driver.close();
+        driver.quit();
 
     }
 }
