@@ -16,7 +16,16 @@ public class GetCommands extends Testbase {
        String text= driver.findElement(By.id("hf_title_signin_membership")).getText();
         System.out.println(text);
 
-       driver.quit ();
+        driver.navigate().to("https://ebay.com");
+
+        driver.navigate().back();
+
+        driver.navigate().forward();
+        System.out.println(driver.getTitle());
+         //Electronics, Cars, Fashion, Collectibles & More | eBay
+        driver.navigate().refresh();
+
+       driver.close ();
 
 
 
